@@ -1,8 +1,11 @@
 import plotly.graph_objs as go
-########### Set up the chart
 
 
-########### Define your variables
+
+################################# Define your paths #################################
+path = "C:/Users/gregglegardaapth/dataqualitymanager/"
+
+################################# Define your variables #################################
 tabtitle='beer tab title!'
 myheading='Data Quality Manager'
 beers=['Chesapeake Stout', 'Snake Dog IPA', 'Imperial Porter', 'Double Dog IPA']
@@ -16,7 +19,7 @@ label2='ABV'
 githublink='https://github.com/austinlasseter/flying-dog-beers'
 sourceurl='https://www.flyingdog.com/beers/'
 
-
+#################################  Set up the chart #################################
 def setup_chart():
     bitterness = go.Bar(
         x=beers,
