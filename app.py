@@ -1,6 +1,7 @@
 import dash
 from dash import html
 from dash import dcc
+import dash_bootstrap_components as dbc
 
 
 
@@ -32,12 +33,13 @@ app.layout = html.Div(children=[
 
     #########################   CONTROLS CONTAINER   #########################
     html.Div([
+        html.H6(["CONTROLS"], style = {'margin-top':'0px'}),
         html.Div([
                 dcc.Dropdown(id='dropdown',
-                             options=[{}],
+                             options=[{'label':i, 'value': i} for i in ['sample', 'sample2', 'sample3']],
                              value = 'sample')
         ],),
-    ],style={'display':'inline-block', 'width':'29%', 'vertical-align':'top'}),
+    ],style={'display':'inline-block', 'width':'29%', 'vertical-align':'top', 'padding':'10px'}),
 
     #########################   TAB AND GRAPH CONTAINER   #########################
     html.Div([
